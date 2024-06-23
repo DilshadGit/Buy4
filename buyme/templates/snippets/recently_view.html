@@ -1,0 +1,197 @@
+{% load static %}
+{% load bootstrap5 %}
+{% load fontawesome_5 %}
+
+<div class="row mt-5">
+    <div class="col-12"><div class="title"><span>Recently viewed items</span></div></div>
+        <div class="col pl-sm-0 pr-sm-0">
+            <div class="owl-carousel owl-theme product-slider">
+                <div class="product-slider-item">
+                    <div class="card card-product">
+                        <div class="img-wrapper">
+                            <a href="detail.html"><img class="card-img-top" src="{% static 'proj/images/product/vneck1.jpg' %}" alt="Card image cap"></a>
+                            <div class="tools tools-bottom" data-animate-in="fadeInDown" data-animate-out="flipOutX">
+                                <div class="btn-group" role="group" aria-label="card-product-tools">
+                                    <button class="btn btn-link btn-sm d-none d-md-inline-block quick-view"><i class="fa fa-search-plus"></i></button>
+                                    <button class="btn btn-link btn-sm">Add to Cart</button>
+                                    <button class="btn btn-link btn-sm d-none d-md-inline-block"><i class="fa fa-heart"></i></button>
+                                </div>
+                            </div>
+                            <span class="badge badge-primary custom-badge arrowed-right label label-top-left">Extra Sale</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"><a href="detail.html">Gas Mustard Yellow Solid Slim Fit</a></p>
+                            <ul class="card-text list-inline">
+                                <li class="list-inline-item"><span class="price">$13.50</span></li>
+                                <li class="list-inline-item"><del class="text-muted">$15.00</del></li>
+                                <li class="list-inline-item d-none d-sm-inline-block"><span class="badge badge-info custom-badge arrowed-left">-10%</span></li>
+                            </ul>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <a href="#" class="d-none d-sm-inline-block">(6 reviews)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-slider-item">
+                    <div class="card card-product">
+                        <div class="img-wrapper">
+                            <a href="detail.html"><img class="card-img-top" src="{% static 'proj/images/product/vneck2.jpg' %}" alt="Card image cap"></a>
+                            <div class="tools tools-bottom" data-animate-in="zoomIn" data-animate-out="fadeOutLeft">
+                                <div class="btn-group" role="group" aria-label="card-product-tools">
+                                    <button class="btn btn-link btn-sm d-none d-md-inline-block quick-view"><i class="fa fa-search-plus"></i></button>
+                                    <button class="btn btn-link btn-sm">Add to Cart</button>
+                                    <button class="btn btn-link btn-sm d-none d-md-inline-block"><i class="fa fa-heart"></i></button>
+                                </div>
+                            </div>
+                            <span class="badge badge-secondary custom-badge arrowed-right label label-top-left">Best Offer</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"><a href="detail.html">Basics Black Striped</a></p>
+                            <ul class="card-text list-inline">
+                                <li class="list-inline-item"><span class="price">$13.50</span></li>
+                                <li class="list-inline-item"><del class="text-muted">$15.00</del></li>
+                                <li class="list-inline-item d-none d-sm-inline-block"><span class="badge badge-warning custom-badge arrowed-left">-10%</span></li>
+                            </ul>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <a href="#" class="d-none d-sm-inline-block">(5 reviews)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-slider-item">
+                    <div class="card card-product">
+                        <div class="img-wrapper">
+                            <a href="detail.html"><img class="card-img-top" src="{% static 'proj/images/product/vneck3.jpg' %}" alt="Card image cap"></a>
+                            <div class="tools tools-right" data-animate-in="flipInX" data-animate-out="flipOutY">
+                                <div class="btn-group-vertical" role="group" aria-label="card-product-tools">
+                                    <button class="btn btn-link btn-sm d-none d-sm-inline-block quick-view"><i class="fa fa-search-plus"></i></button>
+                                    <button class="btn btn-link btn-sm"><i class="fa fa-shopping-cart"></i></button>
+                                    <button class="btn btn-link btn-sm"><i class="fa fa-heart"></i></button>
+                                </div>
+                            </div>
+                            <span class="badge badge-success custom-badge arrowed-right label label-top-left">Special Discount</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"><a href="detail.html">Superdry Blue Solid Slim Fit</a></p>
+                            <ul class="card-text list-inline">
+                                <li class="list-inline-item"><span class="price">$13.50</span></li>
+                                <li class="list-inline-item"><del class="text-muted">$15.00</del></li>
+                                <li class="list-inline-item d-none d-sm-inline-block"><span class="badge badge-danger custom-badge arrowed-left">-10%</span></li>
+                            </ul>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <a href="#" class="d-none d-sm-inline-block">(4 reviews)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-slider-item">
+                    <div class="card card-product">
+                        <div class="img-wrapper">
+                            <a href="detail.html"><img class="card-img-top" src="{% static 'proj/images/product/vneck5.jpg' %}" alt="Card image cap"></a>
+                            <div class="tools tools-right" data-animate-in="slideInRight" data-animate-out="slideOutUp">
+                                <div class="btn-group-vertical" role="group" aria-label="card-product-tools">
+                                    <button class="btn btn-link btn-sm d-none d-sm-inline-block quick-view"><i class="fa fa-search-plus"></i></button>
+                                    <button class="btn btn-link btn-sm"><i class="fa fa-shopping-cart"></i></button>
+                                    <button class="btn btn-link btn-sm"><i class="fa fa-heart"></i></button>
+                                </div>
+                            </div>
+                            <span class="badge badge-warning custom-badge arrowed-right label label-top-left">Best Price</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"><a href="detail.html">Gritstones Olive Solid</a></p>
+                            <ul class="card-text list-inline">
+                                <li class="list-inline-item"><span class="price">$13.50</span></li>
+                                <li class="list-inline-item"><del class="text-muted">$15.00</del></li>
+                                <li class="list-inline-item d-none d-sm-inline-block"><span class="badge badge-secondary custom-badge arrowed-left">-10%</span></li>
+                            </ul>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <a href="#" class="d-none d-sm-inline-block">(2 reviews)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-slider-item">
+                    <div class="card card-product">
+                        <div class="img-wrapper">
+                            <a href="detail.html"><img class="card-img-top" src="{% static 'proj/images/product/vneck4.jpg' %}" alt="Card image cap"></a>
+                            <div class="tools tools-bottom" data-animate-in="rotateInDownLeft" data-animate-out="rotateOutDownLeft">
+                                <div class="btn-group" role="group" aria-label="card-product-tools">
+                                    <button class="btn btn-link btn-sm d-none d-md-inline-block quick-view"><i class="fa fa-search-plus"></i></button>
+                                    <button class="btn btn-link btn-sm">Add to Cart</button>
+                                    <button class="btn btn-link btn-sm d-none d-md-inline-block"><i class="fa fa-heart"></i></button>
+                                </div>
+                            </div>
+                            <span class="badge badge-danger custom-badge arrowed-left label label-top-right">Buy 1 Get 1 Free</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"><a href="detail.html">Celio Brown Textured</a></p>
+                            <ul class="card-text list-inline">
+                                <li class="list-inline-item"><span class="price">$13.50</span></li>
+                                <li class="list-inline-item"><del class="text-muted">$15.00</del></li>
+                                <li class="list-inline-item d-none d-sm-inline-block"><span class="badge badge-success custom-badge arrowed-left">-10%</span></li>
+                            </ul>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <a href="#" class="d-none d-sm-inline-block">(3 reviews)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-slider-item">
+                    <div class="card card-product">
+                        <div class="img-wrapper">
+                            <a href="detail.html"><img class="card-img-top" src="{% static 'proj/images/product/vneck6.jpg' %}" alt="Card image cap"></a>
+                            <div class="tools tools-bottom" data-animate-in="lightSpeedIn" data-animate-out="zoomOut">
+                                <div class="btn-group" role="group" aria-label="card-product-tools">
+                                    <button class="btn btn-link btn-sm d-none d-md-inline-block quick-view"><i class="fa fa-search-plus"></i></button>
+                                    <button class="btn btn-link btn-sm">Add to Cart</button>
+                                    <button class="btn btn-link btn-sm d-none d-md-inline-block"><i class="fa fa-heart"></i></button>
+                                </div>
+                            </div>
+                            <span class="badge badge-info custom-badge arrowed-left label label-top-right">Limited Offer</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"><a href="detail.html">Numero Uno White Striped Regular Fit</a></p>
+                            <ul class="card-text list-inline">
+                                <li class="list-inline-item"><span class="price">$13.50</span></li>
+                                <li class="list-inline-item"><del class="text-muted">$15.00</del></li>
+                                <li class="list-inline-item d-none d-sm-inline-block"><span class="badge badge-primary custom-badge arrowed-left">-10%</span></li>
+                            </ul>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <a href="#" class="d-none d-sm-inline-block">(1 reviews)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

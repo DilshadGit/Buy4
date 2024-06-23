@@ -1,0 +1,98 @@
+{% load static %}
+{% load bootstrap5 %}
+{% load fontawesome_5 %}
+
+{% url 'accounts:cms' as cms_url %}
+{% url 'accounts:staff_profile' as staff_profile_url %}
+{% url 'accounts:users_account' as users_account_url %}
+{% url 'products:products_cms' as products_cms_url %}
+{% url 'accounts:typography' as typography_url %}
+{% url 'accounts:icons' as icons_url %}
+{% url 'accounts:maps' as maps_url %}
+{% url 'accounts:notice' as notice_url %}
+{% url 'accounts:upgrade' as upgrade_url %}
+{% url 'tags:tag_cms' as tag_cms_url %}
+
+<div class="sidebar" data-color="purple" data-image="{% static 'dashboard/assets/img/sidebar-1.jpg' %}">
+        <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+        Tip 2: you can also add an image using data-image tag
+        -->
+    <div class="logo">
+        <a href="{% url 'accounts:cms' %}" class="simple-text">
+            E-BuyMe
+        </a>
+    </div>
+
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+            <li class="{% if request.path == cms_url %} active {% endif %}">
+                <a href="{{cms_url}}">
+                    <i class="material-icons">dashboard</i>
+                    <p>Dashboard</p>
+                </a>
+            </li>
+            <li class="{% if request.path == staff_profile_url %} active {% endif %}"> 
+                <a href="{{staff_profile_url}}">
+                    <i class="material-icons">person</i>
+                    <p>{{first_name}} Profile</p>
+                </a>
+            </li>
+            <li class="{% if request.path == users_account_url %}active{% endif %}">
+                <a href="{{users_account_url}}">
+                    <i class="fa fa-users"></i>
+                    <p>User list</p>
+                </a>
+            </li>
+            <li class="{% if request.path == products_cms_url %}active{% endif %}">
+                <a href="{{products_cms_url}}">
+                    <i class="fa fa-product-hunt"></i>
+                    <p>Products</p>
+                </a>
+            </li>
+            <li class="{% if request.path == tag_cms_url %}active{% endif %}">
+                <a href="{{tag_cms_url}}">
+                    <i class="fa fa-tag"></i>
+                    <p>Tags</p>
+                </a>
+            </li>
+            <!-- <li class="{% if request.path == 'pages:cms' %}active{% endif %}">
+                <a href="{# url 'accounts:table' #}">
+                    <i class="material-icons">content_paste</i>
+                    <p>Table List</p>
+                </a>
+            </li> -->
+            <li class="{% if request.path == typography_url %}active{% endif %}">
+                <a href="{{typography_url}}">
+                    <i class="material-icons">library_books</i>
+                    <p>Typography</p>
+                </a>
+            </li>
+            <li class="{% if request.path == icons_url %}active{% endif %}">
+                <a href="{{icons_url}}">
+                    <i class="material-icons">bubble_chart</i>
+                    <p>Icons</p>
+                </a>
+            </li>
+            <li class="{% if request.path == maps_url %}active{% endif %}">
+                <a href="{{maps_url}}">
+                    <i class="material-icons">location_on</i>
+                    <p>Maps</p>
+                </a>
+            </li>
+            <li class="{% if request.path == notice_url %}active{% endif %}">
+                <a href="{{notice_url}}">
+                    <i class="material-icons text-gray">notifications</i>
+                    <p>Notifications 1</p>
+                </a>
+            </li>
+            <li class="{% if request.path == upgrade_url %}active{% endif %}">
+                <a href="{{upgrade_url}}">
+                    <i class="material-icons">unarchive</i>
+                    <p>Upgrade to PRO 2</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+

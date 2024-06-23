@@ -1,0 +1,53 @@
+{% load static %}
+{% load bootstrap5 %}
+{% load bootstrap4 %}
+{% load fontawesome_5 %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Font & Icon -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        {% fontawesome_5_static %}
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'proj/images/favicon/favicon.ico' %}">
+        <link rel="icon" type="image/x-icon" href="{% static 'proj/images/favicon/favicon.ico' %}">
+        <link rel="icon" type="image/png" href="{% static 'proj/images/favicon/favicon.png' %}">
+        <link rel="apple-touch-icon" href="{% static 'proj/images/favicon/touch-icon-iphone.png' %}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{% static 'proj/images/favicon/touch-icon-ipad.png' %}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'proj/images/favicon/touch-icon-iphone-retina.png' %}">
+        <link rel="apple-touch-icon" sizes="167x167" href="{% static 'proj/images/favicon/touch-icon-ipad-retina.png' %}">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="">
+        <title>Home - BuyMe</title>
+        {% fontawesome_5_static %}
+        <!-- Plugins -->
+        <link rel="stylesheet" href="{% static 'plugins/swiper/swiper.min.css' %}">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!--  Third Party CSS -->
+        <link rel="stylesheet" href="{% static 'proj/css/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'proj/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'proj/css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'proj/css/owl.theme.default.min.css' %}">
+        <link rel="stylesheet" href="{% static 'proj/css/nouislider.min.css' %}">
+        <!-- Mimity CSS -->
+        <link rel="stylesheet" href="{% static 'proj/css/style.min.css' %}">
+        <!-- Main style -->
+        <!-- <link rel="stylesheet" href="../css/style.min.css"> -->
+        <!-- From here added by myself -->
+        <link rel="stylesheet" href="{% static 'css/update.css' %}">
+        
+        <!-- Jquery confirm css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+        <script src="https://unpkg.org@1.5.0"></script>
+        <link rel="stylesheet" href="{% static 'production/production-htmx.css' %}">
+    </head>
+<body>

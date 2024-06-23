@@ -1,0 +1,223 @@
+{% load static %}
+{% load bootstrap5 %}
+
+{% url 'tags:home' as home_url %}
+{% url 'products:list' as products_url %}
+{% url 'carts:index_cart' as carts_url %}
+{% url 'pages:about' as about_url %}
+{% url 'pages:blogs' as blogs_url %}
+{% url 'pages:blog_detail' as blog_detail_url %}
+{% url 'pages:compare' as compare_url %}
+{% url 'pages:contact' as contact_url %}
+{% url 'pages:shop_categories' as shop_categories_url %}
+{% url 'pages:404' as error_404_url %}
+{% url 'pages:faq' as faq_url %}
+{% url 'accounts:logout' as logout_url %}
+{% url 'accounts:login' as login_url %}
+{% url 'accounts:profile' as profile_url %}
+{% url 'accounts:address' as address_url %}
+{% url 'accounts:update_profile' as update_profile_url %}
+{% url 'accounts:change_password' as change_password_url %}
+{% url 'accounts:reset_password' as reset_password_url %}
+{% url 'accounts:registration' as registration_url %}
+{% url 'products:detail' as product_detail_url %}
+{% url 'carts:checkout' as checkout_url %}
+<!-- <div class="container-fluid"> -->
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light p-0 d-none d-lg-flex navbar-theme">
+    <div class="container-fluid">
+        <div class="pos-r d-flex w-100">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item {% if request.path == home_url %}active{% endif %}">
+                    <a class="nav-link" href="{{home_url}}">
+                        <i class="fa fa-home"> </i> Home
+                    </a>
+                </li>
+                <li class="nav-item {% if request.path == products_url %}active{% endif %}">
+                    <a class="nav-link" href="{{products_url}}">
+                        <i class="fa fa-product"> </i> Products
+                    </a>
+                </li>
+                <li class="nav-item {% if request.path == carts_url %}active{% endif %}">
+                    <a class="nav-link" href="{{carts_url}}">
+                        Shopping Cart
+                    </a>
+                </li>
+                <li class="nav-item {% if request.path == checkout_url %}active{% endif %}">
+                    <a class="nav-link" href="{{checkout_url}}">
+                        Checkout
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pages
+                    </a>
+                    <div class="dropdown-menu t-90 smooth" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item {% if request.path == about_url %}active{% endif %}" href="{{about_url}}">
+                            About Us
+                        </a>
+                        <a class="dropdown-item {% if request.path == blog_url %}active{% endif %}" href="{{blog_url}}">
+                            Blog
+                        </a>
+                        <a class="dropdown-item {% if request.path == blog_detail_url %}active{% endif %}" href="{{blog_detail_url}}">
+                            Blog Detail
+                        </a>
+                        <a class="dropdown-item {% if request.path == compare_url %}active{% endif %}" href="{{compare_url}}">
+                            Compare
+                        </a>
+                        <a class="dropdown-item {% if request.path == contact_url %}active{% endif %}" href="{{contact_url}}">
+                            Contact Us
+                        </a>
+                        <a class="dropdown-item {% if request.path == shop_categories_url %}active{% endif %}" href="{{shop_categories_url}}">
+                            Shop Categories
+                        </a>
+                        <a class="dropdown-item {% if request.path == error_404_url %}active{% endif %}" href="{{error_404_url}}">
+                            Error 404
+                        </a>
+                        <a class="dropdown-item {% if request.path == faq_url %}active{% endif %}" href="{{faq_url}}">
+                            FAQ
+                        </a>
+                        {% if request.user.is_authenticated %}
+                            <a class="dropdown-item {% if request.path == logout_url %}active{% endif %}" href="{{logout_url}}">
+                                Logout
+                            </a>
+                        {% else %}
+                            <a class="dropdown-item {% if request.path == login_url %}active{% endif %}" href="{{login_url}}">
+                                Login
+                            </a>
+                            <a class="dropdown-item {% if request.path == registeration_url %}active{% endif %}" href="{{registration_url}}">
+                                Register
+                            </a>
+                        {% endif %}
+                        
+                        <a class="dropdown-item {% if request.path == products_url %}active{% endif %}" href="{{products_url}}">
+                            Products
+                        </a>
+                      
+                        <div class="dropdown-submenu">
+                            <a href="" class="dropdown-item">
+                                My Account
+                            </a>
+                            <ul class="dropdown-menu smooth">
+                                <a href="account-order.html" class="dropdown-item">
+                                    Orders
+                                </a>
+                                {% if request.user.is_authenticated %}
+                                <div class="{% if request.path == profile_url %}active{% endif %}">
+                                    <a href="{{profile_url}}" class="dropdown-item">
+                                        Profile
+                                    </a>
+                                </div>
+                                    <a href="{% url 'accounts:user_address' %}" class="dropdown-item">
+                                        Addresses
+                                    </a>
+                                    <a href="account-wishlist.html" class="dropdown-item">
+                                        Wishlist
+                                    </a>
+                                    <a href="{% url 'accounts:change_password' %}" class="dropdown-item">
+                                        Change Password
+                                    </a>
+                                {% endif %}
+                                <div class="dropdown-submenu">
+                                    <a href="" class="dropdown-item">
+                                        Submenu
+                                    </a>
+                                    <ul class="dropdown-menu smooth">
+                                        <a href="#" class="dropdown-item">Submenu1</a>
+                                        <a href="#" class="dropdown-item">Submenu2</a>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown mega-menu">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarMegaMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Mega Menu
+                    </a>
+                    <div class="dropdown-menu w-100 t-90 smooth" aria-labelledby="navbarMegaMenu">
+                        <div class="mega-menu-content">
+                            <div class="row">
+                                <div class="col">
+                                    <h6 class="p-2 font-weight-bold border border-top-0 border-right-0 border-left-0">Top Categories</h6>
+                                    <div class="list-group">
+                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Polo T-Shirt</a>
+                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Round Neck T-Shirt</a>
+                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">V Neck T-Shirt</a>
+                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Hooded T-Shirt</a>
+                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Polo T-Shirt</a>
+                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Round Neck T-Shirt</a>
+                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">V Neck T-Shirt</a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h6 class="p-2 font-weight-bold border border-top-0 border-right-0 border-left-0">Categories</h6>
+                                    <div class="list-group">
+                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Dresses</a>
+                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Tops</a>
+                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Bottoms</a>
+                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Jackets / Coats</a>
+                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Sweaters</a>
+                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Gym Wear</a>
+                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Others</a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-12 mb-2">
+                                            <div class="card overlay-thumbnail">
+                                                <img src="{% static 'proj/images/product/type-polo.jpg' %}" alt="" class="card-img">
+                                                <a href="{% url 'products:list' %}">
+                                                    <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                                                        <div class="card-text">
+                                                            <div>Polo T-Shirts <br/><small>40% OFF</small></div>
+                                                            <button class="btn btn-sm btn-info rounded"><small>SHOP NOW</small></button>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="card overlay-thumbnail">
+                                                <img src="{% static 'proj/images/product/type-hooded.jpg' %}" alt="" class="card-img">
+                                                <a href="{% url 'products:list' %}">
+                                                    <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                                                        <div class="card-text">
+                                                            <div>New Collection</div>
+                                                            <button class="btn btn-sm btn-warning rounded"><small>SHOP NOW</small></button>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <a href="{% url 'products:list' %}">
+                                        <img class="img-thumbnail" src="{% static 'proj/images/product/mega-menu.jpg' %}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                <a>
+                    <i class="fa ml-4 fa-truck"></i>
+                    Free Shipping
+                </a>
+                <a>
+                    <i class="fa ml-4 fa-money"></i>
+                    Cash on Delivery
+                </a>
+                <a class="d-none d-xl-inline-block">
+                    <i class="fa ml-4 fa-lock"></i>
+                    Secure Payment
+                </a>
+            </span>
+        </div>
+    </div>
+</nav>
+<br>

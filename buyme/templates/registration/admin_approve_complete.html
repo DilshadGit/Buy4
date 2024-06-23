@@ -1,0 +1,26 @@
+{% extends "registration/registration_base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Account Approved" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-6 offset-3">
+			<p>
+			    {% trans "The user's account is now approved." %}
+			</p>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+
+{% comment %}
+**registration/admin_approve_complete.html**
+
+Used after admin successfully approves a user's account. This template has no context
+variables of its own, and should simply inform the admin that the user's
+account is now active.
+{% endcomment %}

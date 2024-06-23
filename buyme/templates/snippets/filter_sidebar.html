@@ -1,0 +1,155 @@
+<!-- Filter Sidebar -->
+<div class="col-lg-3 col-md-4 mb-3">
+    <button class="btn btn-outline-theme btn-block dropdown-toggle d-md-none" type="button" data-toggle="collapse" data-target="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">
+    Filter Data
+    </button>
+    <div class="collapse d-md-block pt-3 pt-md-0" id="collapseFilter">
+        <div class="filter-sidebar">
+            <div class="title"><span>Enabled Filters</span></div>
+            <ul>
+                <li>Categories: T-Shirts
+                    <a href="#" class="remove-filter" data-toggle="tooltip" title="" data-original-title="Remove">
+                        <i class="fa fa-remove"></i>
+                    </a>
+                </li>
+                <li>Availability: In Stock
+                    <a href="#" class="remove-filter" data-toggle="tooltip" title="" data-original-title="Remove">
+                        <i class="fa fa-remove"></i>
+                    </a>
+                </li>
+                <li>Brand: Brand Name 1
+                    <a href="#" class="remove-filter" data-toggle="tooltip" title="" data-original-title="Remove">
+                        <i class="fa fa-remove"></i>
+                    </a>
+                </li>
+                <li>Featured:
+                    <a href="{% url 'products:featured_list' %}" class="filter" data-toggle="tooltip">
+                        <i class="fa fa-items"></i>
+                        Items
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="filter-sidebar">
+            <div class="title"><span>Categories</span></div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="filterCategory1" checked="checked">
+                <label class="custom-control-label" for="filterCategory1">T-Shirts (10)</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="filterCategory2">
+                <label class="custom-control-label" for="filterCategory2">Polo T-Shirts (11)</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="filterCategory3">
+                <label class="custom-control-label" for="filterCategory3">Round Neck T-Shirts (12)</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="filterCategory4">
+                <label class="custom-control-label" for="filterCategory4">V Neck T-Shirts (13)</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="filterCategory5">
+                <label class="custom-control-label" for="filterCategory5">Hooded T-Shirts (14)</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-12">
+                <div class="filter-sidebar">
+                    <div class="title"><span>Options</span></div>
+                    <ul>
+                        <li>
+                            <select class="select-dropdown" data-width="100%">
+                                <option value="all">All Options</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select class="select-dropdown" data-width="100%">
+                                <option value="all">All Options</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-12">
+                <div class="filter-sidebar">
+                    <div class="title"><span>Options 2</span></div>
+                    <div class="custom-controls-stacked">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="filterOption1" name="radio-stacked" class="custom-control-input" checked="checked">
+                            <label class="custom-control-label" for="filterOption1">All Options 2</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="filterOption2" name="radio-stacked" class="custom-control-input">
+                            <label class="custom-control-label" for="filterOption2">Option 2.1</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="filterOption3" name="radio-stacked" class="custom-control-input">
+                            <label class="custom-control-label" for="filterOption3">Option 2.2</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="filterOption4" name="radio-stacked" class="custom-control-input">
+                            <label class="custom-control-label" for="filterOption4">Option 2.3</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-12">
+                <div class="filter-sidebar">
+                    <div class="title"><span>Price Range</span></div>
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Min : $</span>
+                        </div>
+                        <input type="text" class="form-control" name="min-price" id="min-price" value="" />
+                        <div class="input-group-append input-group-prepend">
+                            <span class="input-group-text">Max : $</span>
+                        </div>
+                        <input type="text" class="form-control" name="max-price" id="max-price" value="" />
+                    </div>
+                    <div class="price-range">
+                        <div id="price"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-12">
+                <div class="filter-sidebar">
+                    <div class="title"><span>Rating</span></div>
+                    <div class="rating-range">
+                        <div id="rating-range"></div>
+                    </div>
+                    <input type="hidden" class="form-control" name="min-range" id="min-range" value="1" />
+                    <input type="hidden" class="form-control" name="max-range" id="max-range" value="5" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-9 col-md-8">
+    <div class="title"><span>T-Shirts</span></div>
+    <!-- Sorting Bar -->
+    <div class="sorting-bar">
+        <div class="mr-5" remove-class-on-xs="mr-5" add-class-on-xs="w-100">
+            <span>Sort By</span>
+            <select name="sortby" class="select-dropdown" data-width="180px" data-size="sm">
+                <option value="recomended">Popular</option>
+                <option value="best-selling">Best Selling</option>
+                <option value="low">Low Price &rarr; High Price</option>
+                <option value="hight">High Price &rarr; High Price</option>
+            </select>
+        </div>
+        <div>
+            <span>Show</span>
+            <select name="show" class="select-dropdown" data-width="60px" data-size="sm">
+                <option value="8">8</option>
+                <option value="12">12</option>
+                <option value="16">16</option>
+            </select> Items per page
+        </div>
+    </div>

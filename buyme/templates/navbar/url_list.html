@@ -1,0 +1,28 @@
+{% load static %}
+
+{% url 'tags:home' as home_url %}
+
+{% url 'carts:index_cart' as carts_url %}
+{% url 'carts:checkout' as checkout_url %}
+{% url 'carts:success' as checkout_success_url %}
+
+{% url 'pages:about' as about_url %}
+{% url 'pages:blogs' as blogs_url %}
+{% url 'pages:blog_detail' as blog_detail_url %}
+{% url 'pages:shop_categories' as shop_categories_url %}
+{% url 'pages:compare' as compare_url %}
+{% url 'pages:contact' as contact_url %}
+{% url 'pages:error_404' as error_404_url %}
+{% url 'pages:faq' as faq_url %}
+
+{% url 'accounts:change_password' as change_password_url %}
+{% url 'accounts:logout' as logout_url %}
+{% url 'accounts:login' as login_url %}
+{% url 'accounts:user_address' as user_address_url %}
+{% url 'accounts:profile' as profile_url %}
+{% url 'accounts:update_profile' as update_profile_url %}
+{% url 'accounts:reset_password' as reset_password_url %}
+{% url 'accounts:registration' as registration_url %}
+
+{% url 'products:detail' as product_detail_url %}
+{% url 'products:list' as products_url %}

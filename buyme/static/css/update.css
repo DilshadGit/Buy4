@@ -1,0 +1,145 @@
+.top-header {
+	background-color: #006bb3;
+}
+
+element.style {
+    color: ;
+}
+
+
+/*navbar*/
+.navbar-theme .navbar-nav .nav-link:hover, 
+.navbar-theme .navbar-nav .show>.nav-link, 
+.navbar-theme .navbar-nav .active>.nav-link {
+	/*margin-top: 14px;*/
+	background-color: #006bb3;
+}
+
+/*navbar home menu*/
+.navbar-theme .navbar-nav .nav-link,
+.navbar-theme .navbar-text a  {
+	/*margin-top: 14px;*/
+}
+
+
+.list-menu .list-group-item:hover, 
+.list-menu .sub-menu1>div[role="tabpanel"]>a.list-group-item:hover, 
+.list-menu .sub-menu1>div[role="tabpanel"] a[data-toggle="collapse"]:hover, 
+.list-menu .sub-menu2>div[role="tabpanel"]>a.list-group-item:hover {
+	background: none;
+	background-color: #006bb3;
+}
+
+.list-menu .list-group-item:hover,
+.list-group-item:first-child:hover {
+	background-color: #006bb3;
+}
+
+
+a.nav-link:hover {
+	background-color: #006bb3;
+}
+
+/*## search*/
+button.btn.btn-theme.btn-search {
+	background-color: #006bb3;
+}
+
+button.btn.btn-outline-theme ,
+a.btn.btn-outline-theme,
+.badge-theme {
+	color: #006bb3;
+}
+
+.badge-theme {
+	background-color: #006bb3;
+}
+
+
+/*Registration form fields*/
+div.form-group div.help-block {
+	display: none;
+}
+ div.form-group div.help-block ul li {
+ 	display: none;
+ }
+
+.footer {
+	background-color: #2d5986;
+}
+
+button.btn.btn-theme {
+	background-color: #006bb3;
+}
+
+.h-100 {
+    height: 10%!important;
+}
+
+/*Line under title */
+
+.h4, h4 {
+    font-size: 1.5rem;
+    color: #003d99;
+}
+
+
+.breadcrumb-item>a {
+    color: #003d99;
+    font-weight: bold;
+}
+
+.breadcrumb-item.active {
+    color: #4d94ff;
+}
+
+.title>span {
+    display: inline-block;
+    margin-bottom: -3px;
+    padding-bottom: 10px;
+    color: #666;
+    border-bottom: 3px solid #003d99;
+}
+
+.title {
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(77, 148, 255);
+}
+
+/*button readmor*/
+.btn-theme {
+    color: #fff;
+    background-color: #4d94ff;
+    border-color: #4d94ff;
+}
+
+.btn-theme:hover {
+	background-color: #4d94ff;
+} 
+
+
+<<<<<<< HEAD
+/*checkout page select option*/
+.custom-checkbox .custom-control-input:checked 
+~ .custom-control-label::before, .custom-radio .custom-control-input:checked 
+~ .custom-control-label::before {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/*Login and Register button*/
+.btn-outline-theme:not(:disabled):not(.disabled):active, 
+.btn-outline-theme:not(:disabled):not(.disabled).active, 
+.show>.btn-outline-theme.dropdown-toggle {
+    color: #fff;
+    background-color: #006bb3;
+    border-color: #4d94ff;
+}
+=======
+/*The truck icorn*/
+/*.fa-truck .fa.money .fa-lock {
+	margin-top: 16px;
+	margin-right: 40px;
+}*/
+>>>>>>> feature/pages

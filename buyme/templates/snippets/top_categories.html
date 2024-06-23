@@ -1,0 +1,53 @@
+{% load static %}
+{% load bootstrap5 %}
+{% load fontawesome_5 %}
+
+
+<div class="container">
+    <div class="row" add-class-on-xs="no-gutters">
+
+        <div class="col-12">
+            <div class="title text-center"><span>Top Categories</span></div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card overlay-thumbnail mb-sm-4">
+                <img src="{% static 'proj/images/product/type-polo.jpg' %}" alt="" class="card-img">
+                <a href="products.html">
+                    <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                        <div class="card-text">Polo T-Shirts</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card overlay-thumbnail mb-sm-4">
+                <img src="{% static 'proj/images/product/type-round.jpg' %}" alt="" class="card-img">
+                <a href="products.html">
+                    <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                        <div class="card-text">Round Neck T-Shirts</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card overlay-thumbnail mb-sm-4">
+                <img src="{% static 'proj/images/product/type-vneck.jpg' %}" alt="" class="card-img">
+                <a href="products.html">
+                    <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                        <div class="card-text">V Neck T-Shirts</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 d-block d-md-none d-lg-block">
+            <div class="card overlay-thumbnail mb-sm-4">
+                <img src="{% static 'proj/images/product/type-hooded.jpg' %}" alt="" class="card-img">
+                <a href="products.html">
+                    <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                        <div class="card-text">Hooded T-Shirts</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

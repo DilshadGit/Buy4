@@ -1,0 +1,92 @@
+{% load static %}
+{% load bootstrap5 %}
+
+{% url 'products:list' as product_list %}
+{% url 'carts:check_out' as checkout_url %}
+<!-- Offcanvas Menu -->
+<nav class="offcanvas">
+    <div class="offcanvas-content">
+        <div id="list-menu" class="list-menu list-group {% if request.path == 'tags:home' %}active{% endif %}" data-children=".sub-menu1">
+            <a href="{% url 'tags:home' %}">
+                <i class="fa fa-fw fa-home"></i> Home
+            </a>
+            <a class="{% if request.path == product_list %}active{% endif %}" href="{% url 'products:list' %}">
+                <i class="fa fa-fw fa-tags"></i> Products
+            </a>
+            <a class="{% if request.path == 'carts:index_cart' %}active{% endif %}" href="cart.html">
+                <i class="fa fa-fw fa-shopping-cart"></i> Shopping Cart
+                <span class="badge badge-secondary badge-pill float-right mt-1">
+                    4
+                </span>
+            </a>
+            <a href="checkout.html">
+                <i class="fa fa-fw fa-check"></i> Checkout
+            </a>
+            <a class="nav-item {% if request.path == 'tags:home' %}active{% endif %}" href="{% url 'home' %}">
+                <i class="fa fa-fw fa-home"></i> Home
+            </a>
+            <a href="{% url 'products:list' %}">
+                <i class="fa fa-fw fa-tags"></i> Products
+            </a>
+            <a href="cart.html">
+                <i class="fa fa-fw fa-shopping-cart"></i> Shopping Cart
+                <span class="badge badge-secondary badge-pill float-right mt-1">
+                    4
+                </span>
+            </a>
+            <a class="nav-item {% if request.path == checkout_url %}active{% endif %}" href="{{checkout_url}}">
+                <i class="fa fa-fw fa-check"></i> Checkout
+            </a>
+            <div class="sub-menu1">
+                <a data-toggle="collapse" href="#" data-target="#sub1" role="button" aria-expanded="false" aria-controls="sub1">
+                    <i class="fa fa-fw fa-file"></i>
+                    Pages
+                </a>
+                <div id="sub1" class="collapse" data-parent="#list-menu" role="tabpanel">
+                    <a class="" href="{% url 'pages:about' %}">About Us</a>
+                    <a href="{% url 'pages:blogs' %}">Blog</a>
+                    <a href="{% url 'pages:blog_detail' %}">Blog Detail</a>
+                    <a href="{% url 'pages:compare' %}">Compare</a>
+                    <a href="contact.html">Contact Us</a>
+                    <!-- <a href="cart-empty.html">Empty Shopping Cart</a> -->
+                    <a href="{# url 'pages:404' #}">Error 404</a>
+                    <a href="{% url 'pages:faq' %}">FAQ</a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'accounts:logout' %}">Logout</a>
+                    {% else %}
+                        <a href="{% url 'accounts:login' %}">Login</a>
+                        <a href="{% url 'accounts:registeration' %}">Register</a>
+                    {% endif %}
+
+                    {% for object in products %}
+                        <a href="{% url 'products:detail' slug=object.slug %}">Product Detail</a>
+                    {% endfor %}
+
+                    <div class="list-submenu" id="list-submenu" data-children=".sub-menu2">
+                        <div class="sub-menu2">
+                            <a data-toggle="collapse" href="#" data-target="#sub3" role="button" aria-expanded="false" aria-controls="sub3">
+                                Submenu
+                            </a>
+                            <div id="sub3" class="collapse" data-parent="#list-submenu" role="tabpanel">
+                                <a href="#">Submenu 1</a>
+                                <a href="#">Submenu 2</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-menu1">
+                <a data-toggle="collapse" href="#" data-target="#sub2" role="button" aria-expanded="false" aria-controls="sub2">
+                <i class="fa fa-fw fa-user"></i> My Account</a>
+                <div id="sub2" class="collapse" data-parent="#list-menu" role="tabpanel">
+                    <a href="account-order.html">Orders</a>
+                    <!-- <a href="{# url 'accounts:profile' #}">Profile</a> -->
+                    <a href="account-address.html">Addresses</a>
+                    <a href="account-wishlist.html">Wishlist</a>
+                    <a href="account-password.html">Change Password</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</nav>

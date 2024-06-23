@@ -1,0 +1,22 @@
+{% load static %}
+
+{% include 'dashboard/header/dash_css_links.html' %}
+
+<div class="wrapper">
+    {% include "dashboard/sidebar/side_nav.html" %}
+     
+    <div class="main-panel">
+
+        {% include "dashboard/navbar/cms_navbar.html" %}
+
+        {% block cms_content %}
+        
+        {% endblock cms_content %}
+
+        {% include 'dashboard/footer/cms_footer.html' %}
+
+    </div> <!-- End main-panel -->
+
+</div> <!-- End wrapper -->
+
+{% include 'dashboard/footer/dash_js_links.html' %}

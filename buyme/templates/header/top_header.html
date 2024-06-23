@@ -1,0 +1,57 @@
+{% load static %}
+{% load bootstrap5 %}
+
+<div class="content-overlay"></div>
+<!-- Top Header -->
+<div class="top-header">
+    <div class="container-fluid mb-3">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-between">
+                    <nav class="nav">
+                        <a class="nav-item nav-link d-none d-sm-block" href="#">
+                            <i class="fa fa-question-circle"></i> Help
+                        </a>
+                        <a class="nav-item nav-link d-none d-sm-block" href="#">
+                            <i class="fa fa-phone"></i> +44 (0)7825 810 648
+                        </a>
+                        <a class="nav-item nav-link d-none d-sm-block" href="#">
+                            <i class="fa fa-apple"></i> Download App
+                        </a>
+                    </nav>
+
+                    <ul class="nav">
+                        <select class="select-dropdown-nav" data-width="95px">
+                            <option value="en" data-before='<img src="{% static 'proj/images/en.jpg' %}" class="align-baseline" /> '>English</option>
+                            <option value="fr" data-before='<img src="{% static 'proj/images/fr.jpg' %}" class="align-baseline" /> '>Kurdish</option>
+                        </select>
+                        <select class="select-dropdown-nav" data-width="70px">
+                            <option value="USD">$ USD</option>
+                            <option value="EUR">€ EUR</option>
+                        </select>
+                        <li class="nav-item d-none d-md-block">
+                            <a href="#" class="nav-link">
+                                <i class="fa fa-align-left"></i> Track Order
+                            </a>
+                        </li>
+                        {% if request.user.is_authenticated %}
+                            <li class="nav-item d-sm-none ">
+                                <a href="{% url 'accounts:logout' %}" class="nav-link" data-toggle="modal" data-target="#LoginModal">
+                                    <i class="fa fa-sign-in"></i> Logout
+                                </a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item d-sm-none {{login_page}}">
+                                <a href="{% url 'accounts:login' %}" class="nav-link" data-toggle="modal" data-target="#LoginModal">
+                                    <i class="fa fa-sign-in"></i> Login
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Added -->
+<br><br>

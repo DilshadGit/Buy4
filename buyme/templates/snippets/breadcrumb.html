@@ -1,0 +1,113 @@
+{% url 'accounts:logout' as logout_url %}
+{% url 'accounts:login' as login_url %}
+{% url 'accounts:registeration' as registration_url %}
+{% url 'accounts:profile' as profile_url %}
+
+{% url 'carts:index_cart' as carts_url %}
+{% url 'carts:checkout' as checkout_url %}
+
+{% url 'pages:about' as about_url %}
+{% url 'pages:blogs' as blogs_url %}
+{% url 'pages:blog_detail' as blog_detail_url %}
+{% url 'pages:compare' as compare_url %}
+{% url 'pages:contact' as contact_url %}
+{% url 'pages:faq' as faq_url %}
+
+{% url 'products:list' as products_url %}
+{% url 'products:detail' slug=object.slug as product_detail_url %}
+
+{% url 'search:query' as search_url %}
+
+{% url 'tags:home' as home_url %}
+
+{% url 'pages:404' as error_404_url %}
+
+<!-- Breadcrumb -->
+<div class="breadcrumb-container">
+    <div class="container">
+        <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{% url 'tags:home' %}">Home</a>
+                </li>
+                {% if request.path == about_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        About Us
+                    </li>
+                {% elif request.path == products_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Products
+                    </li>
+                {% elif request.path == product_detail_url %}
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'products:list' %}">Products</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <a href="{% url 'products:detail' slug=object.slug %}">
+                            Detail >> {{object.name}}
+                        </a>
+                    </li>
+                {% elif request.path == carts_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Shopping Cart
+                    </li>
+                {% elif request.path == blogs_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Blog
+                    </li>
+                {% elif request.path == blog_detail_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Blog Detail
+                    </li>
+                {% elif request.path == compare_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Compare
+                    </li>
+                {% elif request.path == contact_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Contact
+                    </li>
+                {% elif request.path == faq_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        FAQ
+                    </li>
+                {% elif request.path == logout_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Logout
+                    </li>
+                {% elif request.path == login_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Login
+                    </li>
+                {% elif request.path == registration_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Sign Up
+                    </li>
+                {% elif request.path == profile_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        My Account
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Profile
+                    </li>
+                {% elif request.path == checkout_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Checkout
+                    </li>
+                {% elif request.path == search_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Search
+                    </li>
+                {% elif request.path == error_404_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Error 404
+                    </li>
+                {% elif request.path == error_404_url %}
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Error 404
+                    </li>
+                {% endif %}
+            </ol>
+        </nav>
+    </div>
+</div>

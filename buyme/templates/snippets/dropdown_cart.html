@@ -1,0 +1,27 @@
+{% load static %}
+{% load bootstrap5 %}
+{% load fontawesome_5 %}
+
+<div class="dropdown-menu dropdown-menu-right dropdown-menu-cart smooth" aria-labelledby="dropdown-cart">
+    {% for product in cart.products.all %}
+        <div class="media">
+            <a href="{% url 'products:detail' slug=product.slug %}">
+            <img class="img-thumbnail d-flex mr-2" src="{{ product.image.url }}" alt="product" width="50"></a>
+            <div class="media-body">
+                <div><a href="{{ product.get_absolute_url }}" class="mt-0 text-default">
+                    {{ product.title }}
+                </a></div>
+                <small>{{ product.size }}</small>
+                <span class="price font-weight-normal">
+                    {{ product.price }}
+                </span>
+                <a href="#" class="float-right" data-toggle="tooltip" title="Remove">
+                    <span class="badge badge-light"><i class="fa fa-remove"></i></span>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+   <!-- media places -->
+    <div class="dropdown-divider"></div>
+</div>

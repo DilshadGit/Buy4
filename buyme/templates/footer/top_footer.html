@@ -1,0 +1,285 @@
+{% load static %}
+{% load bootstrap5 %}
+{% load fontawesome_5 %}
+
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <div class="row equal-height">
+            <div class="col-lg-3 col-md-6">
+                <div class="title-footer"><span>About Us</span></div>
+                <ul>
+                    <li>
+                        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremmagna aliqua. Ut enim ad minim... <a href="{% url 'pages:about' %}">Read More</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="title-footer"><span>Information</span></div>
+                <ul>
+                    <li><i class="fa fa-angle-double-right"></i>
+                        <a href="{% url 'pages:faq' %}">FAQ</a>
+                    </li>
+                    <li><i class="fa fa-angle-double-right"></i>
+                        <a href="#">Policy Privacy</a>
+                    </li>
+                    <li><i class="fa fa-angle-double-right"></i>
+                        <a href="#">Terms and Conditions</a>
+                    </li>
+                    <li><i class="fa fa-angle-double-right"></i>
+                        <a href="#">Shipping Methods</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="title-footer"><span>Categories</span></div>
+                <ul>
+                    <li><i class="fa fa-angle-double-right"></i>
+                        <a href="{% url 'products:list' %}">Cras justo odio</a>
+                    </li>
+                    <li><i class="fa fa-angle-double-right"></i>
+                        <a href="{% url 'products:list' %}">Dapibus ac facilisis in</a>
+                    </li>
+                    <li><i class="fa fa-angle-double-right"></i>
+                        <a href="{% url 'products:list' %}">Morbi leo risus</a>
+                    </li>
+                    <li><i class="fa fa-angle-double-right"></i>
+                        <a href="{% url 'products:list' %}">Porta ac consectetur ac</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="title-footer"><span>Newsletter</span></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, tempora, ipsa voluptatibus porro vel laboriosam</p>
+
+                {# include 'subscribe.html' #}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="title-footer"><span>Our Store</span></div>
+                <ul class="footer-icon">
+                    <li>
+                        <span>
+                            <i class="fa fa-map-marker"></i>
+                        </span> 9 Rosseter Close, Chelmsford
+                    </li>
+                    <li><span><i class="fa fa-phone"></i></span> +44 7825 810 648</li>
+                    <li><span><i class="fa fa-envelope"></i></span> <a href="mailto:cs@buyme.tld">info@ebuyme.com</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="title-footer"><span>Follow Us</span></div>
+                <p class="mb-0">
+                    Follow us and find us in social media ....
+                </p>
+                <ul class="follow-us">
+                    <li>
+                        <a href="https://facebook.com" blank=''>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://rss.com">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="title-footer">
+                    <span>Payment Method</span>
+                </div>
+                <p>We accept online payment or any elcetronic payment including G-Pay, PayPal ...</p>
+                <img src="{% static 'proj/images/payment-1.png' %}" alt="Payment-1">
+                <img src="{% static 'proj/images/payment-2.png' %}" alt="Payment-2">
+                <img src="{% static 'proj/images/payment-3.png' %}" alt="Payment-3">
+                <img src="{% static 'proj/images/payment-4.png' %}" alt="Payment-4">
+                <img src="{% static 'proj/images/payment-5.png' %}" alt="Payment-5">
+                <i class="fab fa-google-pay"></i>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="title-footer"><span>My Account</span></div>
+                <ul>
+                    {% if user.is_authenticated %}
+                        <li>
+                            <i class="fa fa-angle-double-right"></i>
+                            <a href="account-order.html">Orders</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-double-right"></i>
+                            <a href="{# url 'accounts:profile' #}">Profile</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-double-right"></i>
+                            <a href="account-wishlist.html">Wishlist</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-double-right"></i>
+                            <a href="{% url 'accounts:logout' %}">Logout</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="text-center copyright">
+        Copyright &copy; 2019 BuyMe All right reserved
+    </div>
+</div>
+
+<!-- Login Modal -->
+
+<div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="LoginModalLabel">Enter Your Information</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="InputUsername" class="font-weight-bold">Username</label>
+                    <input type="text" class="form-control" id="InputUsername" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label for="InputPassword" class="font-weight-bold">Password</label>
+                    <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+                    <a href="#" class="float-right text-default"><small>Forgot Password ?</small></a>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="checkRememberMe">
+                    <label class="custom-control-label" for="checkRememberMe">Remember Me</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-theme btn-sm">Enter</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Quick View Modal -->
+
+<div class="modal fade" id="QuickViewModal" tabindex="-1" role="dialog" aria-labelledby="QuickViewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-quickview" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                <a href="{{ product.get_absolute_url }}" class="text-default">U.S. Polo Assn. Green Solid Slim Fit</a></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col col-sm-6">
+                            <div class="owl-carousel owl-theme quickview-slider">
+                                <div><img src="{% static 'proj/images/product/polo1.jpg' %}" alt="image"></div>
+                                <div><img src="{% static 'proj/images/product/polo2.jpg' %}" alt="image"></div>
+                                <div><img src="{% static 'proj/images/product/polo3.jpg' %}" alt="image"></div>
+                            </div>
+                        </div>
+                        <div class="col col-sm-6">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="border-top-0">Price</td>
+                                        <td class="border-top-0">
+                                            <ul class="list-inline mb-0">
+                                                <li class="list-inline-item"><span class="price">$13.50</span></li>
+                                                <li class="list-inline-item"><del class="text-muted">$15.00</del></li>
+                                                <li class="list-inline-item d-none d-sm-inline-block"><span class="badge custom-badge arrowed-left badge-primary">-10%</span></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quantity</td>
+                                        <td>
+                                            <div class="input-group input-group-sm input-group-qty">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-theme btn-down" type="button"><i class="fa fa-minus"></i></button>
+                                                </div>
+                                                <input type="text" class="form-control" aria-label="Quantity" value="1" data-min="1" data-max="10">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-theme btn-up" type="button"><i class="fa fa-plus"></i></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Size</td>
+                                        <td>
+                                            <select class="select-dropdown" data-width="65px" data-size="sm">
+                                                <option value="S">S</option>
+                                                <option value="M">M</option>
+                                                <option value="L">L</option>
+                                                <option value="XL">XL</option>
+                                                <option value="XXL">XXL</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr class="d-none d-md-table-row">
+                                        <td>Checkbox</td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="quickviewCheck">
+                                                <label class="custom-control-label" for="quickviewCheck">Check this</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="d-none d-md-table-row">
+                                        <td class="align-middle">Radio Option</td>
+                                        <td>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="quickviewOption1" name="quickview-option" class="custom-control-input">
+                                                <label class="custom-control-label" for="quickviewOption1">Yes</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="quickviewOption2" name="quickview-option" class="custom-control-input">
+                                                <label class="custom-control-label" for="quickviewOption2">No</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <button class="btn btn-sm btn-theme btn-block btn-add-quickview">Add to Cart</button>
+                                            <button class="btn btn-sm btn-outline-theme"><i class="fa fa-heart"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="#top" class="back-top text-center" onclick="$('body,html').animate({scrollTop:0},500); return false">
+    <i class="fa fa-angle-double-up"></i>
+</a>
+</div>
+

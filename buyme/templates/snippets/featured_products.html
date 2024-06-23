@@ -1,0 +1,215 @@
+{% load static %}
+{% load bootstrap5 %}
+{% load fontawesome_5 %}
+
+<div class="row equal-height" add-class-on-xs="no-gutters">
+    <div class="col-12">
+        <div class="title text-center">
+            <span>Featured Products</span>
+        </div>
+    </div>
+    <div class="col-xl col-lg-3 col-md-4 col-sm-6 col-6">
+        <div class="card card-product">
+            <div class="img-wrapper">
+                
+                <a href="{{ object.image.url }}">
+                    <img class="card-img-top" src="{% static 'proj/images/product/polo1.jpg' %}" alt="Card image cap">
+                </a>
+                
+                <div class="tools tools-bottom" data-animate-in="fadeInUp" data-animate-out="fadeOutDown">
+                    <div class="btn-group" role="group" aria-label="card-product-tools">
+                        <button class="btn btn-link btn-sm d-none d-md-inline-block quick-view"><i class="fa fa-search-plus"></i></button>
+                        <button class="btn btn-link btn-sm">Add to Cart</button>
+                        <button class="btn btn-link btn-sm d-none d-md-inline-block"><i class="fa fa-heart"></i></button>
+                    </div>
+                </div>
+                <span class="badge badge-danger custom-badge arrowed-right label label-top-left">Hot Item</span>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    {% for product in cart.products.all %}  
+                    <a href="{% url 'products:detail' slug=product.slug %}">
+                        U.S. Polo Assn. Green Solid Slim Fit
+                    </a>
+                    {% endfor %}
+                </p>
+                <ul class="card-text list-inline">
+                    <li class="list-inline-item"><span class="price">$13.50</span></li>
+                    <li class="list-inline-item"><del class="text-muted">$15.00</del></li>
+                    <li class="list-inline-item d-none d-sm-inline-block"><span class="badge badge-primary custom-badge arrowed-left">-10%</span></li>
+                </ul>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <a href="#" class="d-none d-sm-inline-block">(5 reviews)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl col-lg-3 col-md-4 col-sm-6 col-6">
+        <div class="card card-product">
+            <div class="img-wrapper">
+                
+                <a href="{{ object.image.url }}">
+                    <img class="card-img-top" src="{% static 'proj/images/product/polo2.jpg' %}" alt="Card image cap">
+                </a>
+                
+                <div class="tools tools-bottom" data-animate-in="fadeInUp" data-animate-out="fadeOutDown">
+                    <div class="btn-group" role="group" aria-label="card-product-tools">
+                        <button class="btn btn-link btn-sm d-none d-md-inline-block quick-view"><i class="fa fa-search-plus"></i></button>
+                        <button class="btn btn-link btn-sm">Add to Cart</button>
+                        <button class="btn btn-link btn-sm d-none d-md-inline-block"><i class="fa fa-heart"></i></button>
+                    </div>
+                </div>
+                <span class="badge badge-info custom-badge arrowed-left label label-top-right">New Arrival</span>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    {% for product in cart.products.all %}
+                        <a href="{% url 'products:detail' slug=product.slug %}">
+                            U.S. Polo Assn. Red Solid Slim Fit
+                        </a>
+                    {% endfor %}
+                </p>
+                <ul class="card-text list-inline">
+                    <li class="list-inline-item"><del class="text-muted">$15.00</del></li>
+                    <li class="list-inline-item"><span class="price">$13.50</span></li>
+                    <li class="list-inline-item d-none d-sm-inline-block"><span class="badge badge-success custom-badge arrowed-left">-10%</span></li>
+                </ul>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <a href="#" class="d-none d-sm-inline-block">(4 reviews)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl col-lg-3 col-md-4 col-sm-6 col-6">
+        <div class="card card-product">
+            <div class="img-wrapper">
+                
+                <a href="{{ object.image.url }}">
+                    <img class="card-img-top" src="{% static 'proj/images/product/polo3.jpg' %}" alt="Card image cap">
+                </a>
+               
+                <div class="tools tools-left" data-animate-in="fadeInDown" data-animate-out="fadeOutLeft">
+                    <div class="btn-group-vertical" role="group" aria-label="card-product-tools">
+                        <button class="btn btn-link btn-sm d-none d-sm-inline-block quick-view"><i class="fa fa-search-plus"></i></button>
+                        <button class="btn btn-link btn-sm"><i class="fa fa-shopping-cart"></i></button>
+                        <button class="btn btn-link btn-sm"><i class="fa fa-heart"></i></button>
+                    </div>
+                </div>
+                <span class="badge badge-warning custom-badge arrowed-right label label-bottom-left">New Arrival</span>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    {% for product in cart.products.all %}
+                        <a href="{% url 'products:detail' slug=product.slug %}">
+                            U.S. Polo Assn. Yellow Solid
+                        </a>
+                    {% endfor %}
+                </p>
+                <ul class="card-text list-inline">
+                    <li class="list-inline-item"><del class="text-muted">$15.00</del></li>
+                    <li class="list-inline-item d-none d-sm-inline-block"><span class="badge badge-theme custom-badge arrowed-right">-10%</span></li>
+                    <li class="list-inline-item"><span class="price">$13.50</span></li>
+                </ul>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <a href="#" class="d-none d-sm-inline-block">(3 reviews)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl col-lg-3 col-md-4 col-sm-6 col-6 d-block d-md-none d-lg-block">
+        <div class="card card-product">
+            <div class="img-wrapper">
+               
+                    <a href="{{ object.image.url }}">
+                        <img class="card-img-top" src="{% static 'proj/images/product/polo4.jpg' %}" alt="Card image cap">
+                    </a>
+
+                <div class="tools tools-left" data-animate-in="fadeInLeft" data-animate-out="fadeOutUp">
+                    <div class="btn-group-vertical" role="group" aria-label="card-product-tools">
+                        <button class="btn btn-link btn-sm d-none d-sm-inline-block quick-view"><i class="fa fa-search-plus"></i></button>
+                        <button class="btn btn-link btn-sm"><i class="fa fa-shopping-cart"></i></button>
+                        <button class="btn btn-link btn-sm"><i class="fa fa-heart"></i></button>
+                    </div>
+                </div>
+                <span class="badge badge-danger custom-badge arrowed-left label label-bottom-right">-10%</span>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    {% for product in cart.products.all %}
+                        <a href="{% url 'products:detail' slug=product.slug %}">
+                            Red Tape Blue Solid Slim Fit
+                        </a>
+                    {% endfor %}
+                </p>
+                <ul class="card-text list-inline">
+                    <li class="list-inline-item"><del class="text-muted">$15.00</del></li>
+                    <li class="list-inline-item"><span class="price">$13.50</span></li>
+                </ul>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <a href="#" class="d-none d-sm-inline-block">(2 reviews)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl d-none d-xl-block">
+        <div class="card card-product">
+            <div class="img-wrapper">
+                
+                    <a href="{{ object.image.url }}">
+                        <img class="card-img-top" src="{% static 'proj/images/product/polo5.jpg' %}" alt="Card image cap">
+                    </a>
+
+                <div class="tools tools-left" data-animate-in="fadeInLeft" data-animate-out="fadeOutUp">
+                    <div class="btn-group" role="group" aria-label="card-product-tools">
+                        <button class="btn btn-link btn-sm d-none d-md-inline-block quick-view"><i class="fa fa-search-plus"></i></button>
+                        <button class="btn btn-link btn-sm">Add to Cart</button>
+                        <button class="btn btn-link btn-sm d-none d-md-inline-block"><i class="fa fa-heart"></i></button>
+                    </div>
+                </div>
+                <span class="badge badge-success custom-badge arrowed-right label label-bottom-left">Discount</span>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    {% for product in cart.products.all %}
+                        <a href="{% url 'products:detail' slug=product.slug %}">
+                            U.S. Polo Assn. Black Solid Regular Fit
+                        </a>
+                    {% endfor %}
+                </p>
+                <ul class="card-text list-inline">
+                    <li class="list-inline-item"><span class="price">$13.50</span></li>
+                    <li class="list-inline-item d-none d-sm-inline-block"><span class="badge badge-secondary">-10%</span></li>
+                    <li class="list-inline-item"><del class="text-muted">$15.00</del></li>
+                </ul>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <a href="#" class="d-none d-sm-inline-block">(1 review)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

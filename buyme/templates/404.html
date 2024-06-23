@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+{% load fontawesome_5 %}
+{% url 'home' as home_url %}
+
+{% block content %}
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <nav aria-label="breadcrumb" role="navigation">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'tags:home' %}">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Error 404</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid my-4 text-center">
+        <img src="{% static 'proj/images/404.jpg' %}" alt="404" width="250" class="img-fluid rounded-circle mb-3 img-thumbnail border-info">
+        <h2>
+        <span class="text-danger">Oops!</span>
+        Error 404 page not found
+        </h2>
+        <p>The page you were looking for doesn't exist.</p>
+        <a href="javascript:history.back()" class="btn btn-danger has-icon"><i class="material-icons">Your privouse page</i> Go back</a>
+    </div>
+{% endblock content %}

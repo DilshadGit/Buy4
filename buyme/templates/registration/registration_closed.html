@@ -1,0 +1,15 @@
+{% extends "registration/registration_base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Registration is closed" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-6 offset-3">
+			<p>{% trans "Sorry, but registration is closed at this moment. Come back later." %}</p>
+		</div>
+	</div>
+</div>
+{% endblock %}

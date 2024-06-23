@@ -1,0 +1,46 @@
+
+{% load static %}
+
+{% include 'header/css_links.html' %}
+
+{% include 'navbar/navbar.html' %}
+{% include 'navbar/url_list.html' %}
+
+{% for category in categories.all %}
+    {% if category.icon %}
+        {{ category.icon.as_html }}
+    {% endif %}
+{% endfor %}
+
+{% include 'header/top_header.html' %}
+{% include 'header/middle_header.html' %}
+{% include 'navbar/main_navbar.html' %}
+
+{% url 'tags:home' as home_url %}
+
+
+{% if request.path == home_url %}
+   <!-- This is the animation page -->
+	{% include 'snippets/animation.html' %}
+
+<!-- {# elif request.path == checkout_success_url #} -->
+    
+{% else %}
+	<!-- Breadcrumb -->
+	{% include 'snippets/breadcrumb.html' %}
+
+{% endif %}
+
+
+<!-- Main Container -->
+<div class="container">
+
+	{% block content %}
+   
+    {% endblock content %}
+
+</div>
+
+
+{% include 'footer/top_footer.html' %}
+{% include 'footer/js_links.html' %}
