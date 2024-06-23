@@ -1,0 +1,62 @@
+### Create POSTGRESQL DB 
+- sudo -u postgres psql
+
+### LOCAL POSTGRES
+# Results:
+postgres=# CREATE DATABASE buyme_online_db;
+CREATE DATABASE
+postgres=# \l
+                              List of databases
+    Name    |  Owner   | Encoding | Collate |  Ctype  |   Access privileges   
+------------+----------+----------+---------+---------+-----------------------
+ buyme_db | postgres | UTF8     | C.UTF-8 | C.UTF-8 | 
+ postgres   | postgres | UTF8     | C.UTF-8 | C.UTF-8 | 
+ template0  | postgres | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +
+            |          |          |         |         | postgres=CTc/postgres
+ template1  | postgres | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +
+            |          |          |         |         | postgres=CTc/postgres
+(4 rows)
+
+postgres=# CREATE USER admin_buyme WITH PASSWORD '#Shcko&19?73?Shkar_';
+CREATE ROLE
+postgres=# ALTER ROLE admin_buyme SET client_encoding TO 'utf8';
+ALTER ROLE
+postgres=# ALTER ROLE admin_buyme SET default_transaction_isolation TO 'read committed';
+ALTER ROLE
+postgres=# ALTER ROLE admin_buyme SET timezone TO 'UTC';
+ALTER ROLE
+postgres=# GRANT ALL PRIVILEGES ON DATABASE buyme_online_db TO admin_buyme;
+GRANT
+
+postgres=# \q
+
+
+### SERVER POSTGRES
+
+# Results:
+postgres=# CREATE DATABASE buyme_online_db;
+CREATE DATABASE
+postgres=# \l
+                              List of databases
+    Name    |  Owner   | Encoding | Collate |  Ctype  |   Access privileges   
+------------+----------+----------+---------+---------+-----------------------
+ buyme_db | postgres | UTF8     | C.UTF-8 | C.UTF-8 | 
+ postgres   | postgres | UTF8     | C.UTF-8 | C.UTF-8 | 
+ template0  | postgres | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +
+            |          |          |         |         | postgres=CTc/postgres
+ template1  | postgres | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +
+            |          |          |         |         | postgres=CTc/postgres
+(4 rows)
+
+postgres=# CREATE USER server_buyme WITH PASSWORD '#Shcko&19?73?Shkar_';
+CREATE ROLE
+postgres=# ALTER ROLE server_buyme SET client_encoding TO 'utf8';
+ALTER ROLE
+postgres=# ALTER ROLE server_buyme SET default_transaction_isolation TO 'read committed';
+ALTER ROLE
+postgres=# ALTER ROLE server_buyme SET timezone TO 'UTC';
+ALTER ROLE
+postgres=# GRANT ALL PRIVILEGES ON DATABASE buyme_online_db TO server_buyme;
+GRANT
+
+postgres=# \q
