@@ -28,7 +28,7 @@
         <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="{% url 'tags:home' %}">Home</a>
+                    <a href="{# url 'tags:home' #}">Home</a>
                 </li>
                 {% if request.path == about_url %}
                     <li class="breadcrumb-item active" aria-current="page">
@@ -40,10 +40,10 @@
                     </li>
                 {% elif request.path == product_detail_url %}
                     <li class="breadcrumb-item">
-                        <a href="{% url 'products:list' %}">Products</a>
+                        <a href="{# url 'products:list' #}">Products</a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">
-                        <a href="{% url 'products:detail' slug=object.slug %}">
+                        <a href="{# url 'products:detail' slug=object.slug #}">
                             Detail >> {{object.name}}
                         </a>
                     </li>

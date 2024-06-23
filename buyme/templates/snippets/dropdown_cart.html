@@ -1,11 +1,11 @@
 {% load static %}
-{% load bootstrap5 %}
+{% load django_bootstrap5 %}
 {% load fontawesome_5 %}
 
 <div class="dropdown-menu dropdown-menu-right dropdown-menu-cart smooth" aria-labelledby="dropdown-cart">
     {% for product in cart.products.all %}
         <div class="media">
-            <a href="{% url 'products:detail' slug=product.slug %}">
+            <a href="{# url 'products:detail' slug=product.slug #}">
             <img class="img-thumbnail d-flex mr-2" src="{{ product.image.url }}" alt="product" width="50"></a>
             <div class="media-body">
                 <div><a href="{{ product.get_absolute_url }}" class="mt-0 text-default">

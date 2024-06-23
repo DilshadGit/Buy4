@@ -1,5 +1,5 @@
 {% load static %}
-{% load bootstrap5 %}
+{% load django_bootstrap5 %}
 {% load fontawesome_5 %}
 
 {% url 'cart:cart_index' as cart_url %}
@@ -20,10 +20,10 @@
             </div>
             <div class="col-2 col-sm-1 col-lg-3 pr-0">
                 <div class="d-flex align-items-center h-100 logo-wrapper">
-                    <!-- <a href="{% url 'tags:home' %}" class="d-lg-none">
+                    <!-- <a href="{# url 'tags:home' %#" class="d-lg-none">
                         <img alt="Logo" src="{% static 'proj/images/logo-teal-small.png' %}" class="img-fluid"/>
                     </a> -->
-                    <a href="{% url 'tags:home' %}" class="d-none d-lg-flex mb-2 mb-lg-0">
+                    <a href="{# url 'tags:home' #}" class="d-none d-lg-flex mb-2 mb-lg-0">
                         
                         {% block title %}
                            <img alt="Logo" src="{% static 'proj/images/buyme-low.ico' %}" class="img-fluid" style="width: 120px; height: 48px" />
@@ -48,7 +48,7 @@
                     </div>
                     
                     <!-- Search templates -->
-                    {% include 'snippets/search_form.html' %}
+                    {# include 'snippets/search_form.html' #}
 
                 </div>
             </div>
@@ -59,28 +59,28 @@
                         {% if user.is_authenticated %}
 
                             {% if request.user.is_staff %}
-                                <a href="{% url 'accounts:cms' %}" target="_blank" class="btn btn-outline-theme">
+                                <a href="{# url 'accounts:cms' #}" target="_blank" class="btn btn-outline-theme">
                                     <i class="fa fa-tachometer" aria-hidden="true"></i>
                                     CMS
                                 </a>
                                 <i class="ml-1"> </i>
                             {% endif %}
-                            <a href="{% url 'accounts:logout' %}" class="btn btn-outline-theme">
+                            <a href="{# url 'accounts:logout' #}" class="btn btn-outline-theme">
                                 <i class="fa fa-sign-in d-none d-lg-inline-block"></i>
                                 Logout
                             </a>
-                            <a href="{% url 'accounts:profile' %}" class="btn btn-outline-theme {{profile_page}}">
+                            <a href="{# url 'accounts:profile' #}" class="btn btn-outline-theme {{profile_page}}">
                                 <i class="fa fa-user d-none d-lg-inline-block"></i>
                                 Profile
                             </a>
                             
                         {% else %}
                             <!-- <a href="{# url 'home' #}" class="btn btn-outline-theme" data-toggle="modal" data-target="#LoginModal"> -->
-                            <a href="{% url 'accounts:login' %}" class="btn btn-outline-theme {{login_page}}" role="button">
+                            <a href="{# url 'accounts:login' #}" class="btn btn-outline-theme {{login_page}}" role="button">
                                 <i class="fa fa-sign-in d-none d-lg-inline-block"></i> Login
                             </a>
 
-                            <a href="{% url 'accounts:registeration' %}" class="btn btn-outline-theme {{register_page}}" role="button">
+                            <a href="{# url 'accounts:registeration' #}" class="btn btn-outline-theme {{register_page}}" role="button">
                                 <i class="fa fa-user-plus d-none d-lg-inline-block"></i>
                                 Sign Up
                             </a>
@@ -98,7 +98,7 @@
                                 <a class="dropdown-item" href="account-wishlist.html"><i class="fa fa-fw fa-heart"></i> Wishlist (3) Hello</a>
 
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{% url 'accounts:logout' %}">
+                                <a class="dropdown-item" href="{# url 'accounts:logout' #}">
                                     <i class="fa fa-fw fa-sign-out"></i> Logout
                                 </a>
                             </div>
@@ -106,7 +106,7 @@
                     </div>
 
                     <a href="account-wishlist.html" class="d-none d-xl-block pos-r mr-3">
-                        <img src="{% static 'proj/images/wishlist.png' %}" alt="" width="31">
+                        <img src="{# static 'proj/images/wishlist.png' #}" alt="" width="31">
                         <span class="badge badge-counter badge-theme">3</span>
                     </a>
 

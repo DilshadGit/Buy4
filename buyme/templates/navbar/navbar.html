@@ -1,19 +1,19 @@
 {% load static %}
-{% load bootstrap5 %}
+{% load django_bootstrap5 %}
 
-{% url 'products:list' as product_list %}
-{% url 'carts:check_out' as checkout_url %}
+{# url 'products:list' as product_list #}
+{# url 'carts:check_out' as checkout_url #}
 <!-- Offcanvas Menu -->
 <nav class="offcanvas">
     <div class="offcanvas-content">
         <div id="list-menu" class="list-menu list-group {% if request.path == 'tags:home' %}active{% endif %}" data-children=".sub-menu1">
-            <a href="{% url 'tags:home' %}">
+            <a href="{# url 'tags:home' #}">
                 <i class="fa fa-fw fa-home"></i> Home
             </a>
-            <a class="{% if request.path == product_list %}active{% endif %}" href="{% url 'products:list' %}">
+            <a class="{# if request.path == product_list #}active{# endif #}" href="{# url 'products:list' #}">
                 <i class="fa fa-fw fa-tags"></i> Products
             </a>
-            <a class="{% if request.path == 'carts:index_cart' %}active{% endif %}" href="cart.html">
+            <a class="{# if request.path == 'carts:index_cart' #}active{# endif #}" href="cart.html">
                 <i class="fa fa-fw fa-shopping-cart"></i> Shopping Cart
                 <span class="badge badge-secondary badge-pill float-right mt-1">
                     4
@@ -22,10 +22,10 @@
             <a href="checkout.html">
                 <i class="fa fa-fw fa-check"></i> Checkout
             </a>
-            <a class="nav-item {% if request.path == 'tags:home' %}active{% endif %}" href="{% url 'home' %}">
+            <a class="nav-item {# if request.path == 'tags:home' #}active{# endif #}" href="{# url 'home' #}">
                 <i class="fa fa-fw fa-home"></i> Home
             </a>
-            <a href="{% url 'products:list' %}">
+            <a href="{# url 'products:list' #}">
                 <i class="fa fa-fw fa-tags"></i> Products
             </a>
             <a href="cart.html">
@@ -34,7 +34,7 @@
                     4
                 </span>
             </a>
-            <a class="nav-item {% if request.path == checkout_url %}active{% endif %}" href="{{checkout_url}}">
+            <a class="nav-item {# if request.path == checkout_url #}active{# endif #}" href="{{checkout_url}}">
                 <i class="fa fa-fw fa-check"></i> Checkout
             </a>
             <div class="sub-menu1">
@@ -43,23 +43,23 @@
                     Pages
                 </a>
                 <div id="sub1" class="collapse" data-parent="#list-menu" role="tabpanel">
-                    <a class="" href="{% url 'pages:about' %}">About Us</a>
-                    <a href="{% url 'pages:blogs' %}">Blog</a>
-                    <a href="{% url 'pages:blog_detail' %}">Blog Detail</a>
-                    <a href="{% url 'pages:compare' %}">Compare</a>
+                    <a class="" href="{% url 'page_apps:about' %}">About Us</a>
+                    <a href="{% url 'page_apps:blogs' %}">Blog</a>
+                    <a href="{% url 'page_apps:blog_detail' %}">Blog Detail</a>
+                    <a href="{% url 'page_apps:compare' %}">Compare</a>
                     <a href="contact.html">Contact Us</a>
                     <!-- <a href="cart-empty.html">Empty Shopping Cart</a> -->
-                    <a href="{# url 'pages:404' #}">Error 404</a>
-                    <a href="{% url 'pages:faq' %}">FAQ</a>
+                    <a href="{# url 'page_apps:404' #}">Error 404</a>
+                    <a href="{% url 'page_apps:faq' %}">FAQ</a>
                     {% if user.is_authenticated %}
-                        <a href="{% url 'accounts:logout' %}">Logout</a>
+                        <a href="{# url 'accounts:logout' #}">Logout</a>
                     {% else %}
-                        <a href="{% url 'accounts:login' %}">Login</a>
-                        <a href="{% url 'accounts:registeration' %}">Register</a>
+                        <a href="{# url 'accounts:login' #}">Login</a>
+                        <a href="{# url 'accounts:registeration' #}">Register</a>
                     {% endif %}
 
                     {% for object in products %}
-                        <a href="{% url 'products:detail' slug=object.slug %}">Product Detail</a>
+                        <a href="{# url 'products:detail' slug=object.slug #}">Product Detail</a>
                     {% endfor %}
 
                     <div class="list-submenu" id="list-submenu" data-children=".sub-menu2">

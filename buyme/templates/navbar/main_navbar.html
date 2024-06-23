@@ -1,5 +1,5 @@
 {% load static %}
-{% load bootstrap5 %}
+{% load django_bootstrap5 %}
 
 {% url 'tags:home' as home_url %}
 {% url 'products:list' as products_url %}
@@ -109,13 +109,13 @@
                                         Profile
                                     </a>
                                 </div>
-                                    <a href="{% url 'accounts:user_address' %}" class="dropdown-item">
+                                    <a href="{# url 'accounts:user_address' #}" class="dropdown-item">
                                         Addresses
                                     </a>
                                     <a href="account-wishlist.html" class="dropdown-item">
                                         Wishlist
                                     </a>
-                                    <a href="{% url 'accounts:change_password' %}" class="dropdown-item">
+                                    <a href="{# url 'accounts:change_password' #}" class="dropdown-item">
                                         Change Password
                                     </a>
                                 {% endif %}
@@ -142,25 +142,25 @@
                                 <div class="col">
                                     <h6 class="p-2 font-weight-bold border border-top-0 border-right-0 border-left-0">Top Categories</h6>
                                     <div class="list-group">
-                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Polo T-Shirt</a>
-                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Round Neck T-Shirt</a>
-                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">V Neck T-Shirt</a>
-                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Hooded T-Shirt</a>
-                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Polo T-Shirt</a>
-                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Round Neck T-Shirt</a>
-                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">V Neck T-Shirt</a>
+                                        <a href="{# url 'products:list' #}" class="list-group-item list-group-item-action py-1 px-3 border-0">Polo T-Shirt</a>
+                                        <a href="{# url 'products:list' #}" class="list-group-item list-group-item-action py-1 px-3 border-0">Round Neck T-Shirt</a>
+                                        <a href="{# url 'products:list' #}" class="list-group-item list-group-item-action py-1 px-3 border-0">V Neck T-Shirt</a>
+                                        <a href="{# url 'products:list' #}" class="list-group-item list-group-item-action py-1 px-3 border-0">Hooded T-Shirt</a>
+                                        <a href="{# url 'products:list' #}" class="list-group-item list-group-item-action py-1 px-3 border-0">Polo T-Shirt</a>
+                                        <a href="{# url 'products:list' #}" class="list-group-item list-group-item-action py-1 px-3 border-0">Round Neck T-Shirt</a>
+                                        <a href="{# url 'products:list' #}" class="list-group-item list-group-item-action py-1 px-3 border-0">V Neck T-Shirt</a>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <h6 class="p-2 font-weight-bold border border-top-0 border-right-0 border-left-0">Categories</h6>
                                     <div class="list-group">
-                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Dresses</a>
-                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Tops</a>
-                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Bottoms</a>
-                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Jackets / Coats</a>
-                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Sweaters</a>
-                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Gym Wear</a>
-                                        <a href="{% url 'products:list' %}" class="list-group-item list-group-item-action py-1 px-3 border-0">Others</a>
+                                        <a href="{# url 'products:list' #}" class="list-group-item list-group-item-action py-1 px-3 border-0">Dresses</a>
+                                        <a href="{# url 'products:list' #}" class="list-group-item list-group-item-action py-1 px-3 border-0">Tops</a>
+                                        <a href="{# url 'products:list' #}" class="list-group-item list-group-item-action py-1 px-3 border-0">Bottoms</a>
+                                        <a href="{# url 'products:list' #}" class="list-group-item list-group-item-action py-1 px-3 border-0">Jackets / Coats</a>
+                                        <a href="{# url 'products:list' #}" class="list-group-item list-group-item-action py-1 px-3 border-0">Sweaters</a>
+                                        <a href="{# url 'products:list' #}" class="list-group-item list-group-item-action py-1 px-3 border-0">Gym Wear</a>
+                                        <a href="{# url 'products:list' #}" class="list-group-item list-group-item-action py-1 px-3 border-0">Others</a>
                                     </div>
                                 </div>
                                 <div class="col">
@@ -168,7 +168,7 @@
                                         <div class="col-12 mb-2">
                                             <div class="card overlay-thumbnail">
                                                 <img src="{% static 'proj/images/product/type-polo.jpg' %}" alt="" class="card-img">
-                                                <a href="{% url 'products:list' %}">
+                                                <a href="{# url 'products:list' #}">
                                                     <div class="card-img-overlay d-flex justify-content-center align-items-center">
                                                         <div class="card-text">
                                                             <div>Polo T-Shirts <br/><small>40% OFF</small></div>
@@ -181,7 +181,7 @@
                                         <div class="col-12">
                                             <div class="card overlay-thumbnail">
                                                 <img src="{% static 'proj/images/product/type-hooded.jpg' %}" alt="" class="card-img">
-                                                <a href="{% url 'products:list' %}">
+                                                <a href="{# url 'products:list' #}">
                                                     <div class="card-img-overlay d-flex justify-content-center align-items-center">
                                                         <div class="card-text">
                                                             <div>New Collection</div>
@@ -194,7 +194,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <a href="{% url 'products:list' %}">
+                                    <a href="{# url 'products:list' #}">
                                         <img class="img-thumbnail" src="{% static 'proj/images/product/mega-menu.jpg' %}" alt="">
                                     </a>
                                 </div>

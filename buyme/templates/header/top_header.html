@@ -1,5 +1,5 @@
 {% load static %}
-{% load bootstrap5 %}
+{% load django_bootstrap5 %}
 
 <div class="content-overlay"></div>
 <!-- Top Header -->
@@ -36,13 +36,13 @@
                         </li>
                         {% if request.user.is_authenticated %}
                             <li class="nav-item d-sm-none ">
-                                <a href="{% url 'accounts:logout' %}" class="nav-link" data-toggle="modal" data-target="#LoginModal">
+                                <a href="{# url 'accounts:logout' #}" class="nav-link" data-toggle="modal" data-target="#LoginModal">
                                     <i class="fa fa-sign-in"></i> Logout
                                 </a>
                             </li>
                         {% else %}
                             <li class="nav-item d-sm-none {{login_page}}">
-                                <a href="{% url 'accounts:login' %}" class="nav-link" data-toggle="modal" data-target="#LoginModal">
+                                <a href="{# url 'accounts:login' #}" class="nav-link" data-toggle="modal" data-target="#LoginModal">
                                     <i class="fa fa-sign-in"></i> Login
                                 </a>
                             </li>

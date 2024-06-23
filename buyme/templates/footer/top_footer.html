@@ -1,5 +1,5 @@
 {% load static %}
-{% load bootstrap5 %}
+{% load django_bootstrap5 %}
 {% load fontawesome_5 %}
 
 
@@ -11,7 +11,7 @@
                 <div class="title-footer"><span>About Us</span></div>
                 <ul>
                     <li>
-                        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremmagna aliqua. Ut enim ad minim... <a href="{% url 'pages:about' %}">Read More</a>
+                        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloremmagna aliqua. Ut enim ad minim... <a href="{% url 'page_apps:about' %}">Read More</a>
                     </li>
                 </ul>
             </div>
@@ -19,7 +19,7 @@
                 <div class="title-footer"><span>Information</span></div>
                 <ul>
                     <li><i class="fa fa-angle-double-right"></i>
-                        <a href="{% url 'pages:faq' %}">FAQ</a>
+                        <a href="{% url 'page_apps:faq' %}">FAQ</a>
                     </li>
                     <li><i class="fa fa-angle-double-right"></i>
                         <a href="#">Policy Privacy</a>
@@ -36,16 +36,16 @@
                 <div class="title-footer"><span>Categories</span></div>
                 <ul>
                     <li><i class="fa fa-angle-double-right"></i>
-                        <a href="{% url 'products:list' %}">Cras justo odio</a>
+                        <a href="{# url 'products:list' #}">Cras justo odio</a>
                     </li>
                     <li><i class="fa fa-angle-double-right"></i>
-                        <a href="{% url 'products:list' %}">Dapibus ac facilisis in</a>
+                        <a href="{# url 'products:list' #}">Dapibus ac facilisis in</a>
                     </li>
                     <li><i class="fa fa-angle-double-right"></i>
-                        <a href="{% url 'products:list' %}">Morbi leo risus</a>
+                        <a href="{# url 'products:list' #}">Morbi leo risus</a>
                     </li>
                     <li><i class="fa fa-angle-double-right"></i>
-                        <a href="{% url 'products:list' %}">Porta ac consectetur ac</a>
+                        <a href="{# url 'products:list' #}">Porta ac consectetur ac</a>
                     </li>
                 </ul>
             </div>
@@ -66,7 +66,7 @@
                         </span> 9 Rosseter Close, Chelmsford
                     </li>
                     <li><span><i class="fa fa-phone"></i></span> +44 7825 810 648</li>
-                    <li><span><i class="fa fa-envelope"></i></span> <a href="mailto:cs@buyme.tld">info@ebuyme.com</a></li>
+                    <li><span><i class="fa fa-envelope"></i></span> <a href="mailto:cs@buyme.ltd">info@ebuyme.com</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -132,7 +132,7 @@
                         </li>
                         <li>
                             <i class="fa fa-angle-double-right"></i>
-                            <a href="{% url 'accounts:logout' %}">Logout</a>
+                            <a href="{# url 'accounts:logout' #}">Logout</a>
                         </li>
                     {% endif %}
                 </ul>
